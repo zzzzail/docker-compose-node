@@ -1,0 +1,12 @@
+{
+  "name": "docker-compose-node",
+  "version": "0.0.1",
+  "main": "app.js",
+  "repository": "https://github.com/zzzzail/docker-compose-node.git",
+  "author": "zail <878773559@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+  	"koa":"^2.0.0",
+    "redis": "^2.6.3"
+  }
+}
