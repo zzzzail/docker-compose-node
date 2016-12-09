@@ -1,12 +1,12 @@
-version: "1"
+version: "2"
 
 services:
   redis:
-    image: redis
+    build: ./docker/redis
     container_name: ${REDIS_HOST}
     volumes:
       - ./docker/redis/data:/data
-  web:
+  webapp:
     build: .
     env_file:
       - ./docker/node.js/.env
@@ -16,7 +16,7 @@ services:
       - "3000:3000"
       - "5858:5858"
     volumes:
-      - .:/code
-    working_dir: /code
+      - .:/webapp
+    working_dir: /webapp
     depends_on:
       - redis
